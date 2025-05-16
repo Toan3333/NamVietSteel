@@ -1,0 +1,49 @@
+@layer components
+	.item-comp
+		@apply flex
+	.button-to-top
+		@apply opacity-0 pointer-events-none
+		&.active
+			@apply opacity-100 pointer-events-auto
+	.form-contact-out-stock 
+		@apply rem:w-[850px]  relative max-md:w-full
+		.carousel__button
+			position: absolute !important
+			top: 0.5rem !important
+			right: 0.5rem !important
+			width: 32px
+			height: 32px
+			background-color: #630814
+			svg
+				@apply rem:w-[16px] rem:h-[16px]
+		form
+			.form-row-submit
+				@apply flex-center relative
+				.wpcf7-spinner
+					@apply absolute right-[300px] top-1/2 -translate-y-1/2 ml-2
+				.button-primary
+					@apply cursor-pointer
+					&:hover
+						@apply bg-Primary-6 text-Neutral-White
+			.form-group
+				label
+					@apply text-Primary-6
+	// .indicator-swipe
+	// 	&:not(.custom)
+	// 		@apply absolute top-1/2 -translate-y-1/2  right-15
+	// 	@apply z-30 bg-blue-75 w-[calc(144/19.2*1rem)] h-14 rounded-full flex justify-between items-center px-3 pointer-events-none
+	// 	@apply transition-all
+	// 	// &:not(.active)
+	// 	// 	@apply opacity-0
+	// 	svg
+	// 		@apply stroke-white
+	// 	.hand
+	// 		animation: moveSwipeGesture 2.25s infinite ease-in-out
+	// 		@apply md:w-12 md:h-12 w-10 h-10
+	// @keyframes moveSwipeGesture
+	// 	0%
+	// 		transform: translateX(-8px)
+	// 	50%
+	// 		transform: translateX(8px)
+	// 	100%
+	// 		transform: translateX(-8px)
