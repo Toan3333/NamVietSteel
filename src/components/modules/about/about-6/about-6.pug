@@ -1,0 +1,26 @@
+section.about-6(class="section-py bg-Neutral-50")
+	.container
+		.heading(class="mb-16")
+			h4(class="text-2xl tracking-[-0.4px] font-bold text-Primary-1 mb-4") LỊCH SỬ HÌNH THÀNH
+			h3(class="title-40 !font-normal") Từ những bước đi đầu tiên đến những dấu ấn vững chắc hôm nay
+		.wrap-slide-years
+			.relative
+				.swiper
+					.swiper-wrapper
+						-for(i=0;i<10;i++)
+							.swiper-slide
+								.item-history(class="flex flex-col gap-6")
+									.img
+										div(class="rem:h-[213px]  overflow-hidden img-full")
+											+PugImg()
+									.wrap(class="flex flex-col gap-3")
+										.line-year(class="flex flex-col items-center")
+											.circle(class="w-11 h-11 rounded-full border border-transparent rem:p-[10px] bg-Neutral-50")
+												.dot(class="w-full h-full rounded-full bg-Primary-2")
+									.content(class="h-[150px] md:rem:h-[213px]")
+										.wrap-content(class=" text-center")
+											.format-content(class="text-Neutral-700 font-normal") Bằng kinh nghiệm và quan hệ tốt với các đơn vị sản xuất, Nam Việt luôn đảm bảo về sự đa dạng và chất lượng, cũng như xuất xứ các dòng sản phẩm do công ty cung cấp
+											.number(class="mt-6 text-2xl font-bold text-Neutral-950") 1977
+				.wrap-button-slide(class="!hidden lg:!flex")
+					.btn.btn-prev.btn-sw-1.primary
+					.btn.btn-next.btn-sw-1.primary

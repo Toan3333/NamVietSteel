@@ -1,0 +1,32 @@
+.home-3
+	.home-3-main
+		.home-3-btn
+			a
+				letter-spacing: -0.32px
+				@apply text-Neutral-White font-semibold rem:pb-[6px] border-b border-b-white/20 relative inline-block
+
+				&::after
+					content: ""
+					@apply absolute bottom-[-1px] left-0 w-full h-[1px] bg-white
+					transform: scaleX(0.3)
+					transform-origin: center
+					transition: transform 0.4s ease
+
+				&:hover::after
+					transform: scaleX(1)
+	.wrap
+		@apply relative z-20
+		ul.home-3-nav
+			@apply md:flex  md:items-center  md:absolute static bottom-0 w-full grid grid-cols-3 gap-3
+			li
+				letter-spacing: -0.48px
+				line-height: calc(30 / 24)
+				@apply transition-all ease-in-out cursor-pointer text-center md:rem:w-[280px] w-full
+				@apply rem:py-[14px]  bg-Primary-5 text-Neutral-White
+				@apply md:text-2xl text-[14px] font-bold md:first:rounded-tl-2xl md:last:rounded-tr-2xl hover:bg-Primary-1 hover:text-Neutral-White
+				@apply rounded-none
+				&.active
+					@apply bg-Primary-1 text-Neutral-White
+
+
+

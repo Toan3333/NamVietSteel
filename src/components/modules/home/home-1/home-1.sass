@@ -1,0 +1,28 @@
+.home-1
+	.swiper
+		.home-1-content
+			@apply absolute lg:bottom-18 md:bottom-10 left-0 text-Neutral-White bg-linear-5  
+			@apply md:py-[12px] lg:rem:py-[42px] md:pl-[32px]
+			@apply xl:rem:pl-[260px] lg:rem:w-[1273px] md:w-[560px]
+			h1
+				line-height: calc( 76 / 52 )
+				letter-spacing: -2.08px
+				@apply lg:rem:text-[52px] md:text-[32px] font-medium text-Primary-2 
+	.wrap-button-slide
+		.btn-prev 
+			@apply lg:rem:left-[152px]  md:left-[2.9rem]
+		.btn-next 
+			@apply lg:rem:right-[152px] md:right-[2.9rem]
+@media (max-width: 767.98px)
+	.home-1-mobile
+		.swiper
+			.home-1-banner-mobile
+				height: calc(100svh - var(--header-height))
+				a
+					@apply w-full h-full
+					img
+						@apply w-full h-full object-cover
+				.home-1-content-mobile
+					@apply text-Neutral-White bg-linear-5  absolute p-5 top-10
+					h1
+						@apply text-[36px] text-Primary-2

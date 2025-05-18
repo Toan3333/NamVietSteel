@@ -1,0 +1,33 @@
+.home-5
+	.home-5-list
+		.item
+			.image
+				@apply w-full h-full z-10
+				a
+					img
+						@apply w-full h-full object-cover
+				.content
+					@apply w-full opacity-0 invisible transition-all ease-in-out duration-700
+					&.active
+						@apply opacity-100 visible
+				&::before
+					content: ""
+					background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%)
+
+					
+					@apply absolute top-0 left-0 w-full h-full  pointer-events-none z-0
+			&.active
+				flex: 5.48
+				.image
+					a
+						@apply pt-[calc(480/866*100%)]
+					&::before
+						background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 60%, #000 100%)
+@media (max-width: 767.98px)
+	.home-5
+		.home-5-list
+			@apply flex-col
+			.item
+				.image
+					.content
+						@apply opacity-100 visible

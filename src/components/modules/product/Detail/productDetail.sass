@@ -1,0 +1,90 @@
+.product-detail
+	.format-content
+		letter-spacing: -0.36px
+		@apply text-lg text-Neutral-950 font-normal
+		table
+			@apply w-full table-fixed border-Neutral-100 border mt-6
+			tr
+				@apply  bg-white border-b border-b-Neutral-100
+				td
+					@apply py-3 px-4 text-Neutral-500-main font-normal
+					&.parameter
+						@apply text-Neutral-700 font-semibold
+		.product-btn-contact 
+			@apply rem:w-[200px] mb-3 mt-5
+			a
+				letter-spacing: -0.36px
+				@apply inline-flex items-center justify-center bg-Primary-1 text-Neutral-White
+				@apply text-lg font-normal rem:py-[10px] px-5 rounded-full w-full
+				@apply border border-transparent hover:border-Primary-1 hover:bg-transparent hover:text-Primary-1
+		.product-detail-share 
+			@apply flex items-center gap-5
+			span
+				letter-spacing: -0.36px
+				@apply text-lg text-Neutral-950 font-normal
+			a
+				@apply inline-flex items-center justify-center  bg-Primary-2 w-12 h-12
+				i
+					@apply text-xl font-normal text-Neutral-White
+	.product-slide-thumbs
+		.swiper-slide
+			.img
+				@apply  border-2 border-transparent transition-all ease-in-out cursor-pointer
+			&.swiper-slide-thumb-active
+				.img
+					@apply border-Primary-1
+		.btn
+			&.btn-sw-1
+				&.btn-prev
+					&::before
+						content: '\f106'
+				&.btn-next
+					&::before
+						content: '\f107'
+						@apply font-awesome
+
+.product-detail-tab
+	ul.product-detail-list
+		@apply grid grid-cols-3 gap-5 rem:px-[260px]
+		li
+			@apply text-center rem:py-[10px] px-5 transition-all ease-in-out
+			@apply border-b border-b-transparent hover:border-b-Primary-1
+			a
+				letter-spacing: -0.4px
+				@apply text-xl font-bold text-Neutral-950 hover:text-Primary-1
+				
+			&.active
+				@apply border-b border-b-Primary-1
+				a
+					@apply text-Primary-1
+	.format-content 
+		
+		table
+			@apply w-full  border-Neutral-100 border mt-6 mb-6
+			thead
+				tr
+					@apply bg-Primary-2 rem:py-[10px] px-5 text-Neutral-White
+					th
+						@apply border-r border-r-Neutral-White text-xl font-bold rem:h-[84px]
+			tr
+				@apply  bg-white border-b border-b-Neutral-100 
+				td
+					@apply rem:py-[10px] px-5 text-Neutral-500-main font-normal text-center border-r border-r-Neutral-100
+	.button-read-more
+		a
+			@apply flex items-center gap-3 font-medium text-Primary-1
+			i
+				@apply text-xl font-light
+	.product-detail-tab-content
+		.general-info
+			.hidden-content
+				transition: all 0.3s ease
+				@apply hidden
+				&.active
+					@apply block
+.product-detail-2
+	.wrap-button-slide
+		.btn-prev 
+			@apply left-[-4.5rem]
+		.btn-next 
+			@apply right-[-4.5rem]

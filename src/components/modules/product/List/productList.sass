@@ -1,0 +1,67 @@
+.product-2
+	.product-category
+		ul.product-main
+			@apply border border-Primary-4 mb-16
+			li
+				
+				a
+					@apply flex px-5 py-4  border-b border-b-Primary-4
+				&.has-children
+					&>a
+						@apply relative flex items-center justify-between
+						&.dropdown-active
+							@apply text-Primary-1
+							&::after
+								@apply rotate-180 text-Primary-1
+						&::after
+							content: '\f078'
+							@apply font-awesome font-light text-xl text-Neutral-500-main
+				
+			ul.product-level-1
+				@apply bg-Primary-4
+				li
+					@apply border-none
+					a
+						@apply text-Primary-2 hover:text-Primary-1
+	.product-filter
+		ul.product-main
+			@apply border border-Primary-4 mb-16
+			li
+				
+				a
+					@apply flex px-5 py-4  border-b border-b-Primary-4
+				&.has-children
+					&>a
+						@apply relative flex items-center justify-between
+						&.dropdown-active
+							@apply text-Primary-1
+							&::after
+								@apply rotate-180 text-Primary-1  
+						&::after
+							content: '\f078'
+							@apply font-awesome font-light text-xl text-Neutral-500-main
+				
+			ul.product-level-1
+				@apply bg-Primary-4 p-4 flex flex-col gap-3
+				li
+					@apply border-none
+					a
+						@apply text-Primary-2 hover:text-Primary-1
+					.product-list
+						@apply flex items-center justify-between 
+						.product-checkbox
+							background-image: none
+							@apply flex gap-3 font-normal items-center pl-1
+							@apply cursor-pointer transition-all mb-0
+							&:hover
+								@apply text-Primary-1
+								&::before
+									@apply text-Primary-1
+							&.checked
+								@apply text-Primary-1
+								&::before
+									content: '\f14a'
+									@apply text-Primary-1 font-black
+							&::before
+								content: '\f0c8'
+								@apply font-awesome text-Neutral-300 font-light transition-all text-xl

@@ -4,13 +4,78 @@ header.header
 			input#search-btn(type="text", class="searchinput", placeholder="Tìm kiếm...", class="px-4 py-2 rounded bg-Neutral-White shadow-lg w-full cursor-pointer")
 			.search-icon(class="absolute top-2/4 -translate-y-2/4 right-0 pr-5 text-Primary-Primary_01")
 				i.fa-sharp.fa-regular.fa-magnifying-glass
-	//- .header-bar-mobile
-	//- 	.header-bar 
-	//- 		i.fa-solid.fa-bars
-	//- .header-search 
-	//- 	i.fa-regular.fa-magnifying-glass
+	
 
-	.header-nav-mobile(class="block lg:hidden")
+	.header-top(class="xl:block hidden")
+		.header-top-svg(class="relative")
+			a(href="#" class="img-ratio ratio:pt-[46_1920] lozad")
+				img(src="./img/svg-header.svg", alt="")
+			.header-top-info(class="absolute top-2/4 -translate-y-2/4 rem:right-[260px]  flex items-center")
+				.header-contact(class="flex items-center gap-8 text-Neutral-White")
+					.header-mail 
+						a(href="#" class="flex items-center gap-3")
+							i(class="rem:text-[18px] font-normal text-Primary-1").fa-regular.fa-envelope
+							span info@namvietsteel.com
+					.header-phone
+						a(href="#" class="flex items-center gap-3")
+							i(class="rem:text-[18px] font-normal text-Primary-1").fa-regular.fa-phone-volume
+							span (+84) 979 583 779
+				.header-language(class="flex items-center rem:gap-[14px] rem:ml-[14px]")
+					.icon-vn(class="w-6")
+						a(href="#" class="img-ratio ")
+							img(src="./img/VN.svg", alt="")
+					.icon-en(class="w-6")
+						a(href="#" class="img-ratio ")
+							img(src="./img/EN.svg", alt="")
+	.container
+		.header-main(class="xl:flex hidden items-center justify-between h-full py-4")
+			.header-logo(class="rem:w-[136px] -mt-10")
+				a(href="#" class="img-ratio ratio:pt-[82_136] lozad")
+					img(src="/img/logo.svg", alt="Logo", class="")
+			.header-menu(class="flex items-center justify-between h-full")
+				ul.header-nav
+					li 
+						a(href="./home.html") 
+							i.fa-regular.fa-house
+					li 
+						a(href="./about.html") GIỚI THIỆU
+					li 
+						a(href="./productList.html") SẢN PHẨM
+					li 
+						a(href="./project.html") DỰ ÁN
+					li 
+						a(href="./serviceList.html") DỊCH VỤ
+					li 
+						a(href="./newList.html") TIN TỨC
+					li 
+						a(href="./about.html") E- CATALOGUE
+					li 
+						a(href="./contact.html") LIÊN HỆ
+					li 
+						.header-search(class="text-Primary-1")
+							a(href="#")
+								i.fa-regular.fa-magnifying-glass
+	.header-main-mobile(class="xl:hidden flex items-center justify-between h-full px-[15px]")
+		.header-language-mobile(class="flex items-center rem:gap-[14px]") 
+			.icon-vn(class="md:w-14 w-10")
+					a(href="#" class="img-ratio ")
+						img(src="./img/VN.svg", alt="")
+			.icon-en(class="md:w-14 w-10")
+				a(href="#" class="img-ratio ")
+					img(src="./img/EN.svg", alt="")
+		.header-logo-mobile(class="w-[7rem]")
+			a(href="#" class="w-full h-full block lozad")
+				img(src="/img/logo.svg", alt="Logo", class="w-full h-full object-cover")
+		.header-right-mobile(class="flex items-center gap-3")
+			.header-search 
+				i.fa-regular.fa-magnifying-glass
+			.header-bar-mobile
+				.header-bar 
+					i.fa-solid.fa-bars
+				
+			
+				
+	.header-nav-mobile(class="block xl:hidden")
 		ul(class="flex items-center text-white")
 			li
 				a(href="#") Home

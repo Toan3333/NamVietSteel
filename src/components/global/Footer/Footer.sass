@@ -1,0 +1,69 @@
+.footer
+	background-position: bottom !important
+	.footer-top
+		.footer-follow
+			.footer-icon-follow 
+				@apply flex items-center gap-2
+				a
+					@apply w-10 h-10 inline-flex items-center justify-center bg-Neutral-White 
+					i
+						letter-spacing: 0.32px
+						@apply text-Primary-1 font-normal
+					&:hover
+						@apply bg-Primary-1 
+						i
+							@apply text-Neutral-White
+	.footer-nav 
+		@apply rem:h-[64px] mb-12
+		ul.footer-nav-menu
+			@apply flex items-center justify-between h-full
+			@apply border-t border-t-white/20 border-b border-b-white/20
+			li
+				@apply h-full
+				a
+					letter-spacing: -0.36px
+					@apply rem:text-[18px] font-semibold opacity-90 uppercase text-Neutral-White border-b border-b-transparent
+					@apply hover:border-b-Neutral-White h-full flex items-center
+	.footer-list
+		.footer-column 
+			@apply text-Neutral-White
+			h3
+				letter-spacing: -0.48px
+				line-height: calc( 30 / 24 )
+				@apply text-2xl font-bold mb-5
+			a.address
+				line-height: calc( 22 / 16 )
+				letter-spacing: -0.32px
+				@apply font-normal rem:text-[16px]
+			ul.footer-info
+				@apply mt-5
+	.footer-newsletter
+		@apply mb-15
+		.input-email
+			@apply rem:w-[400px] relative
+			input
+				@apply w-full rem:h-[56px] px-5 border border-white/20 bg-transparent text-Neutral-White placeholder:text-Neutral-White/50
+			.button-submit 
+				@apply absolute top-0 right-0 h-full bg-Primary-1 text-Neutral-White w-14 inline-flex items-center justify-center
+				
+			
+@media (max-width: 1279.98px)
+	.footer
+		.footer-bottom
+			@apply w-[662px] bottom-[3px] right-[-1px]
+
+@media (max-width: 1023.98px)
+	.footer
+		.footer-bottom
+			@apply w-[550px] bottom-[6px]
+@media (max-width: 767.98px)
+	.footer
+		background-image: none !important
+		@apply bg-Primary-2
+		.footer-nav 
+			@apply h-full mb-5
+			ul.footer-nav-menu
+				@apply grid grid-cols-1 gap-5 py-5
+		.footer-newsletter
+			@apply gap-3 items-start
+			@apply mb-5

@@ -67,7 +67,7 @@ module.exports = {
 			},
 		},
 		fontFamily: {
-			primary: ["Lexend", "sans-serif"],
+			primary: ["Inter Tight", "sans-serif"],
 			awesome: ['"Font Awesome 6 Pro"'],
 		},
 		fontSize: {
@@ -217,6 +217,7 @@ module.exports = {
 					2: "#4d555b",
 					3: "#bdb8b3",
 					4: "#e1ddd9",
+					5: "#3E4449",
 				},
 				Secondary: {
 					1: "#fed750",
@@ -241,7 +242,7 @@ module.exports = {
 					900: "#3d3d3d",
 					950: "#292929",
 					White: "#ffffff",
-					"500*": "#818181",
+					"500-main": "#818181",
 					Black: "#000000",
 				},
 				stroke: {
@@ -266,6 +267,8 @@ module.exports = {
 				"linear-2": `linear-gradient(180deg, #D7D7D7 -0.93%, #F3F3F3 15.85%, #FFF 37.21%, #EAEAEA 100.93%)`,
 				"linear-3": `linear-gradient(236deg, #85363D 13.61%, #FFECEC 50.12%, #76222A 85.9%)`,
 				"linear-4": `linear-gradient(90deg, #471116 0%, rgba(173, 41, 54, 0.00) 100%)`,
+				"linear-5": `linear-gradient(90deg, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0.00) 100%)`,
+				"linear-6": `linear-gradient(67deg, #D0D3D5 29.78%, #FFF 54.04%, #EAEAEA 70.22%)`,
 			}),
 			backgroundPosition: {
 				"pos-100-0": "100% 0%",

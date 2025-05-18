@@ -84,8 +84,55 @@ mixin toolFixed()
 					li 
 						a(href="") 
 							img(src="./img/social/mess-bot.png", alt="facebook", class="")
-
-				
-
-
-
+mixin ButtonPrimary(text)
+	a.button-primary(href="#") 
+		span=text 
+mixin ContactSection()
+	.contact-section(class="xl:rem:py-[168px] md:py-20 py-10 bg-linear-6 relative")
+		.contact-bg(class="absolute left-0 bottom-[-1rem] hidden md:block")
+			.image(class="xl:rem:w-[584px] lg:rem:w-[450px] w-[320px]")
+				a(href="#" class="img-ratio ratio:pt-[636_584] lozad")
+					img(src="./img/bg-contact.png", alt="") 
+		.container
+			.contact-content(class="md:rem:max-w-[684px] flex md:ml-[23rem] ml-0  flex-col gap-7")
+				h4(class="text-2xl font-bold text-Primary-1 tracking-[-0.48px]") LIÊN HỆ VỚI CHÚNG TÔI
+				h3(class="title-48") Liên hệ với Thép Nam Việt
+				.format-content(class="text-xl font-normal text-Primary-2")
+					p Chúng tôi luôn sẵn sàng hỗ trợ bạn. Liên hệ ngay với Thép Nam Việt để được tư vấn nhanh chóng về sản phẩm và giải pháp thép phù hợp cho công trình của bạn.
+				.contact-button 
+					a.phone(href="#") 
+						.icon 
+							i.fa-solid.fa-phone
+							span (+84) 979 583 779
+					a.zalo(href="") 
+						.icon 
+							img(src="./img/zalo.svg", alt="")
+							span Chat với chúng tôi
+mixin Banner()
+	.banner 
+		a(href="#" class="img-ratio ratio:pt-[600_1920]")
+			img(src="./img/1.jpg", alt="")
+		.global-breadcrumb
+			.container
+				nav(aria-label="breadcrumbs", class="rank-math-breadcrumb")
+					p
+						a(href="#") Trang chủ
+						span(class="separator")  | 
+						span(class="last") Về chúng tôi
+mixin ProductItem()
+	.product-item(class="bg-Neutral-50 p-5 group")
+		.image(class="")
+			a(href="./productDetail.html" class="img-ratio lozad zoom-img-1")
+				img(src="./img/1.jpg", alt="") 
+		.content(class="pt-6")
+			h3(class="text-2xl font-bold text-Neutral-950 tracking-[-0.48px] group-hover:text-Primary-1")
+				a(href="#") Q235B
+			.product-parameter(class="flex flex-col gap-3 mt-3")
+				-for(var i = 0; i < 3; i++)
+					.product-info(class="flex items-center gap-2") 
+						.left(class="rem:w-[77px] flex-shrink-0")
+							.title(class="text-Neutral-500-main font-normal") Quy cách:
+						.right 
+							.text(class="text-Neutral-700 font-normal tracking-[-0.32px]") 3.00 - 100.00 mmx
+			.product-btn(class="inline-flex mt-6")
+				+ButtonPrimary("Xem thêm")

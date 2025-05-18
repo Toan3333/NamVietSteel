@@ -1,0 +1,52 @@
+.about-6
+	.wrap-slide-years
+		@apply relative
+		&::before
+			content: ''
+			@apply absolute top-[57%] md:top-[50%] -translate-y-1/2 left-0 w-full h-[1px] bg-Primary-2
+		.swiper-slide
+			&:first-child
+				.line-year
+					.circle
+						@apply bg-white border-Primary-1
+						.dot
+							@apply bg-Primary-1
+			&.swiper-slide-next
+				.wrap-content
+					.title-48
+						@apply text-Primary-1
+				.content
+					.line-year
+						.dot
+							@apply bg-Primary-1
+			.line-year
+				.circle
+					&.active
+						@apply bg-white border-Primary-1
+						.dot
+							@apply bg-Primary-1
+			.number
+				&.active
+					@apply text-Primary-1
+
+			@media (max-width: 767.98px)
+				.item-history
+					.content
+						@apply rem:-translate-y-[calc(40px-15px)]
+			@screen md
+				&:nth-child(odd)
+					.item-history
+						@apply flex flex-col-reverse
+						.content
+							@apply flex flex-col justify-end
+				&:nth-child(even)
+					.item-history
+						
+						.content
+							@apply flex justify-start flex-col
+							
+						.wrap-content
+							@apply pt-0 pb-10
+				
+						.line-year
+							@apply flex flex-col-reverse

@@ -1,30 +1,79 @@
-footer
-	.tool-fixed-cta
-		.btn.button-to-top
-			.btn-icon
-				.icon 
-		a.btn.btn-content(class="bg-red-400")
-			.btn-icon
-				.icon
-					i.fa-light.fa-location-dot
-			.content Chi nhánh
-		a.btn.btn-content(class="bg-orange-500")
-			.btn-icon
-				.icon
-					i.fa-light.fa-phone
-			.content 1900 2273 – (028) 7100 0001
-		.btn.btn-content.btn-social
-			.btn-icon
-				.icon
-					i.fa-light.fa-messages
-			.content
-				ul 
+footer.footer(class="md:pt-20 md:pb-28 py-10 relative overflow-hidden" setBackground="./img/bg-footer.svg")
+	.footer-image(class="absolute right-[-6.5rem] bottom-4 z-10 hidden md:block")
+		.image(class="xl:rem:w-[670px] lg:w-[25rem] w-[20rem]")
+			a(href="#" class="ratio-contain ratio:pt-[447_670] lozad")
+				img(src="./img/image-footer.png", alt="") 
+	.container 
+		.footer-top(class="flex flex-col md:flex-row items-start md:items-center justify-between md:mb-12 mb-10")
+			h2(class="title-40 !text-Neutral-White") Công Ty TNHH Thương Mại Thép Nam Việt
+			.footer-follow(class="flex items-center gap-4 mt-3 md:mt-0")
+				span(class="text-sm font-normal text-Neutral-White") Theo dõi chúng tôi
+				.footer-icon-follow 
+					a(href="#")
+						i(class="fa-brands fa-facebook-f")
+					a(href="#")
+						i(class="fa-brands fa-youtube")
+		.footer-nav 
+			ul.footer-nav-menu
+				li 
+					a(href="#") Giới thiệu
+				li 
+					a(href="#") Sản phẩm
+				li 
+					a(href="#") Dự án
+				li 
+					a(href="#") Dịch vụ
+				li 
+					a(href="#") Tin tức
+				li 
+					a(href="#") E- catalogue
+				li 
+					a(href="#") Liên hệ 
+		.footer-list(class="grid md:grid-cols-3 gap-base")
+			.footer-column 
+				h3 Trụ sở chính
+				a.address(href="#") 307D Nguyễn Văn Trỗi, P. 1, Q. Tân Bình, TP. HCM
+				ul.footer-info 
 					li 
-						a(href="") 
-							img(src="./img/mess.svg", alt="facebook", class="")
+						a(href="#") Tel: (+84 8) 3997 3979 | Fax: (+84 8) 3997 3737
 					li 
-						a(href="") 
-							img(src="./img/mess.svg", alt="zalo", class="")
+						a(href="#") Hotline: (+84) 979 583 779: 
+					li
+						a(href="#") Email: info@namvietsteel.com
+			.footer-column 
+				h3 Trụ sở chính
+				a.address(href="#") 307D Nguyễn Văn Trỗi, P. 1, Q. Tân Bình, TP. HCM
+				ul.footer-info 
 					li 
-						a(href="") 
-							img(src="./img/mess.svg", alt="facebook", class="")
+						a(href="#") Tel: (+84 8) 3997 3979 | Fax: (+84 8) 3997 3737
+					li 
+						a(href="#") Hotline: (+84) 979 583 779: 
+					li
+						a(href="#") Email: info@namvietsteel.com
+			.footer-column 
+				h3 Trụ sở chính
+				a.address(href="#") 307D Nguyễn Văn Trỗi, P. 1, Q. Tân Bình, TP. HCM
+				ul.footer-info 
+					li 
+						a(href="#") Tel: (+84 8) 3997 3979 | Fax: (+84 8) 3997 3737
+					li 
+						a(href="#") Hotline: (+84) 979 583 779: 
+					li
+						a(href="#") Email: info@namvietsteel.com
+		.footer-newsletter(class="md:mt-12 mt-5 flex flex-col md:flex-row items-center lg:rem:gap-[258px] md:gap-base")
+			h3(class="text-2xl font-bold text-Neutral-White tracking-[-0.48px]") Đăng ký nhận bản tin
+			.footer-newsletter-form(class="flex items-center gap-4")
+				.input-email
+					input(type="email" placeholder="Nhập email của bạn")
+					.button-submit 
+						a(href="#")
+							i.fa-regular.fa-arrow-right
+		.footer-bottom(class="absolute rem:bottom-[8px]  -right-2 hidden md:block")
+			.footer-bottom-info(class="relative")
+				a(href="#")
+					img(src="./img/svg-footer-bottom.svg", alt="") 
+				.footer-copyright(class="absolute top-2/4 -translate-y-2/4 text-center text-Neutral-White w-full")
+					span(class="text-sm font-normal opacity-90") © 2025 Nam Việt Steel. All Rights Reserved. Thiết kế web bởi Cánh Cam. 
+		.footer-bottom-mobile 
+			.footer-copyright-mobile(class="text-Neutral-White text-center")
+				span(class="text-sm font-normal opacity-90") © 2025 Nam Việt Steel. All Rights Reserved. Thiết kế web bởi Cánh Cam. 
