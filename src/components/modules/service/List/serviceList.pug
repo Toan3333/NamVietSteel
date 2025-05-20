@@ -1,0 +1,10 @@
+section.service-1 
+	+Banner()
+section.service-2(class="section-py")
+	.container 
+		.heading(class="mb-base")
+			h4(class="text-xl font-bold text-Primary-1 tracking-[-0.4px] mb-4") DỊCH VỤ
+			h3(class="title-40 !font-normal ") Cập nhật những tin tức mới nhất từ Nam Việt Steel
+		.service-2-list(class="grid grid-cols-2 gap-base")
+			-for(var i = 0; i < 4; i++)
+				+ServiceItem()

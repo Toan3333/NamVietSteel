@@ -1,0 +1,48 @@
+section.news-detail
+	.global-breadcrumb
+		.container
+			nav(aria-label="breadcrumbs", class="rank-math-breadcrumb")
+				p
+					a(href="#") Trang chủ
+					span(class="separator")  | 
+					span(class="last") Về chúng tôi
+section.news-detail-2(class="section-py")
+	.wrapper(class="rem:w-[1160px] mx-auto")
+		.heading(class="pb-5 border-b border-b-Neutral-200")
+			h2(class="title-40 mb-3") Lễ ra mắt liên doanh TTCapital – Cosmos Initia – Koterasu
+			.date(class="text-sm text-Neutral-500-main") 17/03/2025 
+		.format-content 
+			.news-detail-2-share(class="flex items-center gap-5")
+				span(class="font-bold text-Neutral-950") Chia sẻ:
+				.news-detail-2-social(class="flex items-center gap-3")
+					a(href="#")
+						i.fa-brands.fa-facebook
+					a(href="#")
+						i.fa-brands.fa-linkedin
+					a(href="#")
+						i.fa-brands.fa-youtube
+			p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam vitae a adipisci voluptatem ea cum delectus, in quasi sapiente impedit amet numquam dolor incidunt quam possimus ullam repellendus dolore ad.
+section.news-detail-3(class="section-py bg-Neutral-50")
+	.container 
+		h2(class="title-40 text-center mb-base") Tin tức liên quan
+		.news-slide(class="relative")
+			.swiper
+				.swiper-wrapper 
+					-for(var i = 0; i < 9; i++)
+						.swiper-slide 
+							.item(class="group")
+								.image 
+									a(href="./newsDetail.html" class="img-ratio ratio:pt-[280_320] lozad zoom-img")
+										img(src="./img/1.jpg", alt="") 
+								.content(class="pt-6 flex flex-col gap-4")
+									.date 08.04.2025
+									h3(class="text-lg font-semibold text-Neutral-950 tracking-[-0.36px] group-hover:text-Primary-1")
+										a(href="#") Công Ty TNHH Thương Mại Thép Nam Việt - Kỷ niệm 25 năm thành lập và phát triển
+									.desc(class="text-Neutral-700 tracking-[-0.32px] font-normal") Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+			.wrap-button-slide(class="xl:block hidden")
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1
+			.wrap-button-slide-mobile(class="flex xl:hidden items-center justify-center mt-base gap-10 ")
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1
+			

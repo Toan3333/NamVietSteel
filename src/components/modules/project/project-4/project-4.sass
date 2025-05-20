@@ -1,0 +1,33 @@
+.project-4
+	.col-left
+		.format-content
+			p
+				letter-spacing: -0.48px
+				line-height: calc( 30 / 24 )
+				@apply text-Neutral-White rem:text-[24px] font-normal
+	.col-right
+		.format-content
+			p
+				letter-spacing: -0.36px
+				line-height: calc( 24 / 18 )
+				@apply text-lg font-normal text-Neutral-White
+	.project-4-list
+		
+		.col-left
+			@apply flex flex-col gap-6
+			.top
+				@apply lg:rem:h-[160px] h-auto
+			.bottom
+				@apply mt-auto flex flex-col flex-1
+		.col-right
+			.image
+				@apply relative
+				&::before
+					content: ""
+					background: linear-gradient(90deg, #CA0008 0%, rgba(202, 0, 8, 0.00) 30.42%)
+					@apply absolute w-full h-full top-0 left-0 pointer-events-none z-10
+@media (max-width: 1279.98px)
+	.project-4
+		h2
+			letter-spacing: 0
+			@apply text-[24px]

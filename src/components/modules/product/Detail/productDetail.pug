@@ -7,27 +7,27 @@ section.global-breadcrumb
 				span(class="last") Về chúng tôi
 section.product-detail(class="section-py")
 	.container 
-		.product-detail-main(class="flex gap-20")
-			.col-left(class="rem:w-[680px]")
-				.product-slide-images(class="flex xs:max-md:flex-col-reverse gap-5")
-					.product-slide-thumbs(class="w-full md:w-[20%] lg:rem:w-[80px] flex-shrink-0 relative")
-						div(class="md:absolute top-0 left-0 w-full h-full flex flex-col items-center")
-							.btn.btn-prev.btn-sw-1
-							.swiper(class="w-full h-full rem:py-[29px]")
+		.product-detail-main(class="flex flex-col lg:flex-row xl:gap-20 gap-10")
+			.col-left(class="lg:rem:w-[680px] w-full")
+				.product-slide-images(class="flex flex-col-reverse lg:flex-row gap-5")
+					.product-slide-thumbs(class="w-full  lg:rem:w-[80px] flex-shrink-0 relative")
+						div(class="lg:absolute top-0 left-0 h-full w-full lg:flex lg:flex-col flex-row lg:items-center")
+							.btn.btn-prev.btn-sw-1(class="lg:block !hidden")
+							.swiper(class="w-full h-full lg:rem:py-[29px] py-3")
 								.swiper-wrapper
 									-for(i=0;i<5;i++)
 										.swiper-slide
 											.img(class="xs:max-md:img-ratio img-full h-full")
 												+PugImg()
-							.btn.btn-next.btn-sw-1
-					.product-slide-main(class="md:flex-1 max-w-full w-full relative md:w-[80%] lg:w-[calc(100%-35.41666666666667rem-1.04167rem)]")
+							.btn.btn-next.btn-sw-1(class="lg:block !hidden")
+					.product-slide-main(class="w-full relative lg:w-[calc(100%-35.41666666666667rem-1.04167rem)]")
 						.swiper
 							.swiper-wrapper
 								-for(i=0;i<5;i++)
 									.swiper-slide
 										a.img(class="img-ratio", data-fancybox="product-detail")
 											+PugImg()
-			.col-right(class="w-[calc(100%-35.41666666666667rem-4.16667rem)]")
+			.col-right(class="lg:w-[calc(100%-35.41666666666667rem-4.16667rem)] w-full")
 				h1.product-title(class="title-40 !font-normal mb-6") Q235B				
 				.format-content
 					p Khởi lập từ những năm 90, Nam Việt sớm xác định mình là công ty thương mại, chuyên phân phối các sản phẩm thép cho xây dựng công nghiệp và dân dụng. Một cách tự hào, chúng tôi coi mình là cầu nối giữa các nhà sản xuất và người tiêu thụ. Và, để được khách hàng tin dùng, không gì khác, chúng tôi giúp khách hàng có được những sản phẩm tốt nhất, phù hợp nhất cho công trình của mình.
@@ -90,14 +90,18 @@ section.product-detail(class="section-py")
 					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quaerat doloribus asperiores itaque, iusto id perferendis ullam enim consectetur quisquam in alias quos. Rerum beatae quod tempora, doloremque aliquid ratione. 22
 		
 section.product-detail-2(class="section-py")
-	.container 
-		h2(class="text-center text-32 text-Primary-2 font-normal mb-base") Sản phẩm liên quan
+	.container
+		.heading(class="flex items-center xl:justify-center justify-between xl:mb-0 mb-base") 
+			h2(class="xl:text-center text-left text-32 text-Primary-2 font-normal xl:mb-base mb-0") Sản phẩm liên quan
+			.btn-mobile(class="xl:hidden flex items-center gap-3")
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1
 		.product-detail-2-related(class="relative")
 			.swiper 
 				.swiper-wrapper 
 					-for(i=0;i<10;i++)
 						.swiper-slide 
 							+ProductItem()
-			.wrap-button-slide
+			.wrap-button-slide(class="xl:block hidden")
 				.btn.btn-prev.btn-sw-1
 				.btn.btn-next.btn-sw-1

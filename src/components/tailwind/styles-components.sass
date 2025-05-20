@@ -51,7 +51,7 @@
 						content: "/"
 						@apply font-awesome font-normal text-sm mx-2
 				span.last
-					@apply font-bold
+					@apply font-bold text-Neutral-White
 	.pagination
 		ul.page-numbers
 			@apply flex items-center justify-center gap-6
@@ -62,3 +62,32 @@
 					@apply text-lg font-bold text-Primary-2 hover:bg-Primary-1 hover:text-Neutral-White
 					&.active
 						@apply bg-Primary-1 text-Neutral-White
+	#form-requirement
+		@apply rem:w-[850px]  relative max-md:w-full p-5
+		.carousel__button
+			position: absolute !important
+			top: 0.5rem !important
+			right: 0.5rem !important
+			width: 32px
+			height: 32px
+			background-color: #ed1c24
+			svg
+				@apply rem:w-[16px] rem:h-[16px]
+		h3
+			@apply text-6xl text-Primary-1 text-center font-bold mb-5 #{!important}
+	form.wpcf7-form.submitting
+		button
+			&[type="submit"]
+				@apply pointer-events-none cursor-not-allowed
+	.form-group-style-primary
+		@apply relative cursor-pointer
+		&:focus
+			outline: none !important
+		input
+			@apply w-full px-6 py-3 border border-neutral-300 text-black rem:text-[16px] leading-6 font-normal
+			&:focus
+				outline: none !important
+	.form-submit
+		@apply flex justify-center
+		button
+			@apply px-6 py-3 bg-Primary-1 text-white rem:text-[16px] leading-6 font-normal

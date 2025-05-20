@@ -269,6 +269,8 @@ module.exports = {
 				"linear-4": `linear-gradient(90deg, #471116 0%, rgba(173, 41, 54, 0.00) 100%)`,
 				"linear-5": `linear-gradient(90deg, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 0.00) 100%)`,
 				"linear-6": `linear-gradient(67deg, #D0D3D5 29.78%, #FFF 54.04%, #EAEAEA 70.22%)`,
+				"linear-line": `linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 49.04%)`,
+				"linear-line-2": `linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)`,
 			}),
 			backgroundPosition: {
 				"pos-100-0": "100% 0%",

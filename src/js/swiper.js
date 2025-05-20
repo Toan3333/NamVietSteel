@@ -11,6 +11,9 @@ export function swiperInit() {
 	swiperCertification();
 	swiperProductDetail();
 	swiperProductRelated();
+	swiperService();
+	swiperServiceOther();
+	swiperNewsOther();
 }
 function swiperBanner() {
 	const swiper = new Swiper(".home-1 .swiper", {
@@ -76,13 +79,12 @@ function swiperProductDetail() {
 		loop: true,
 		breakpoints: {
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 4,
 				spaceBetween: 16,
-				direction: "vertical",
 			},
 			1024: {
-				slidesPerView: 3,
-				spaceBetween: 15,
+				slidesPerView: 4,
+				spaceBetween: 20,
 				direction: "vertical",
 			},
 			1200: {
@@ -158,10 +160,10 @@ function swipeHistory() {
 		spaceBetween: 12,
 		speed: 1500,
 		rewind: true,
-		autoplay: {
-			delay: 5500,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 5500,
+		// 	disableOnInteraction: false,
+		// },
 		navigation: {
 			nextEl: ".about-6 .btn-next",
 			prevEl: ".about-6 .btn-prev",
@@ -172,7 +174,7 @@ function swipeHistory() {
 				spaceBetween: 20,
 			},
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 2,
 				spaceBetween: 20,
 			},
 			1200: {
@@ -242,7 +244,7 @@ function swiperCertification() {
 		},
 		breakpoints: {
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 2,
 				spaceBetween: 20,
 			},
 			1200: {
@@ -271,11 +273,86 @@ function swiperProductRelated() {
 		},
 		breakpoints: {
 			768: {
-				slidesPerView: 3,
+				slidesPerView: 2,
 				spaceBetween: 20,
 			},
 			1200: {
 				slidesPerView: 4,
+				spaceBetween: 40,
+			},
+		},
+	});
+}
+
+function swiperService() {
+	const swiperPartner = new Swiper(".service-detail .swiper", {
+		modules: [Autoplay, Navigation],
+		slidesPerView: 1,
+		spaceBetween: 12,
+		speed: 1500, // càng lớn càng chậm
+		loop: true,
+
+		autoplay: {
+			delay: 4500, // chạy liên tục
+			disableOnInteraction: false,
+		},
+	});
+}
+
+function swiperServiceOther() {
+	const swiperPartner = new Swiper(".service-detail-2 .swiper", {
+		modules: [Autoplay, Navigation],
+		slidesPerView: 1,
+		spaceBetween: 12,
+		speed: 1500, // càng lớn càng chậm
+		loop: true,
+
+		autoplay: {
+			delay: 4500, // chạy liên tục
+			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: ".service-detail-2 .btn-next",
+			prevEl: ".service-detail-2 .btn-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			1200: {
+				slidesPerView: 2,
+				spaceBetween: 40,
+			},
+		},
+	});
+}
+
+function swiperNewsOther() {
+	const swiper = new Swiper(".news-detail-3 .swiper", {
+		modules: [Autoplay, Navigation],
+		slidesPerView: 1,
+		spaceBetween: 16,
+		loop: true,
+		speed: 1500,
+		autoplay: {
+			delay: 4500,
+		},
+		navigation: {
+			nextEl: ".news-detail-3 .btn-next",
+			prevEl: ".news-detail-3 .btn-prev",
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 20,
+				slidesPerView: 2,
+			},
+			1024: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			1920: {
+				slidesPerView: 3,
 				spaceBetween: 40,
 			},
 		},

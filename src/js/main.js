@@ -16,8 +16,10 @@ $(document).ready(function () {
 	header.init();
 	swiperInit();
 	buttonToTop();
+	watchObserveInputFile();
 	toggleCheckbox();
 	initReadMoreToggle();
+	loadMoreJobs();
 	// countUpInit();
 
 	const $items = $(".home-5-list .item");
@@ -57,6 +59,23 @@ $(document).ready(function () {
 	});
 });
 
+function watchObserveInputFile() {
+	$('input[name="file-cv"]').on("change", function () {
+		const file = this.files[0];
+		if (file) {
+			const fileName = file.name;
+			const fileNameDisplay = $("<span>", {
+				class: "file-name text-sm text-body-text-66 mt-1 block",
+				text: "File CV: " + fileName,
+			});
+
+			$(this).closest(".form-input-file").find(".file-name").remove();
+
+			$(this).closest(".form-input-file").append(fileNameDisplay);
+		}
+	});
+}
+
 export function toggleCheckbox() {
 	document.querySelectorAll(".product-checkbox").forEach((checkbox) => {
 		// Đảm bảo checkbox không có class "checked" khi mới load
@@ -67,6 +86,30 @@ export function toggleCheckbox() {
 			this.classList.toggle("checked");
 		});
 	});
+}
+
+function loadMoreJobs() {
+	const btnMore = document.querySelector(".more");
+	if (!btnMore) return;
+
+	const hiddenRows = document.querySelectorAll("tr.hidden");
+	let index = 0;
+	const showCount = 4;
+
+	function handleLoadMore(event) {
+		event.preventDefault();
+
+		for (let i = index; i < index + showCount && i < hiddenRows.length; i++) {
+			hiddenRows[i].classList.remove("hidden");
+		}
+		index += showCount;
+
+		btnMore.style.display = index < hiddenRows.length ? "flex" : "none";
+	}
+
+	btnMore.addEventListener("click", handleLoadMore);
+
+	btnMore.style.display = hiddenRows.length > 0 ? "flex" : "none";
 }
 
 function initReadMoreToggle() {
@@ -92,27 +135,6 @@ function initReadMoreToggle() {
 		});
 	}
 }
-
-// export function indicatorSlide() {
-// 	if ($(".indicator-swipe").length > 0) {
-// 		var callback = function (entries) {
-// 			entries.forEach(function (entry) {
-// 				if (entry.isIntersecting) {
-// 					entry.target.classList.add("active");
-// 					setTimeout(function () {
-// 						entry.target.classList.remove("active");
-// 					}, 3000);
-// 				}
-// 			});
-// 		};
-
-// 		var observer = new IntersectionObserver(callback);
-// 		var animationItems = document.querySelectorAll(".indicator-swipe");
-// 		animationItems.forEach(function (item) {
-// 			observer.observe(item);
-// 		});
-// 	}
-// }
 
 // fancyfox popup
 document.addEventListener("DOMContentLoaded", function () {

@@ -1,0 +1,24 @@
+section.catalog-1
+	+Banner()
+section.catalog-2(class="section-py")
+	.container 
+		.heading(class="mb-base")
+			h4(class="text-xl font-bold text-Primary-1 tracking-[-0.4px] mb-4") E- CATALOGUE
+			h3(class="title-40 !font-normal ") Cập nhật những tin tức mới nhất từ Nam Việt Steel
+		.catalog-2-list(class="grid grid-cols-4 gap-base")
+			-for(var i = 0; i < 12; i++)
+				.item(class="p-4 bg-Neutral-50 group")
+					.image 
+						a(href="#" class="img-ratio ratio:pt-[405_288] lozad zoom-img")
+							img(src="./img/catalog.png", alt="") 
+					.content(class="mt-4")
+						h3(class="text-xl font-bold text-Neutral-950 group-hover:text-Primary-1")
+							a(href="#") Thép cuộn cán nóng		
+		.pagination(class="mt-base")
+			ul.page-numbers
+				li 
+					a.active(href="#") 1 
+				li 
+					a(href="#") 2
+				li 
+					a(href="#") 3			 

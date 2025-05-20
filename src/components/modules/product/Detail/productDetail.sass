@@ -3,7 +3,7 @@
 		letter-spacing: -0.36px
 		@apply text-lg text-Neutral-950 font-normal
 		table
-			@apply w-full table-fixed border-Neutral-100 border mt-6
+			@apply w-full table-fixed border-Neutral-100 border mt-6 
 			tr
 				@apply  bg-white border-b border-b-Neutral-100
 				td
@@ -45,9 +45,9 @@
 
 .product-detail-tab
 	ul.product-detail-list
-		@apply grid grid-cols-3 gap-5 rem:px-[260px]
+		@apply grid grid-cols-3 md:gap-5 gap-2 lg:rem:px-[260px] md:px-[40px] px-0
 		li
-			@apply text-center rem:py-[10px] px-5 transition-all ease-in-out
+			@apply text-center md:rem:py-[10px] md:px-5 p-2 transition-all ease-in-out
 			@apply border-b border-b-transparent hover:border-b-Primary-1
 			a
 				letter-spacing: -0.4px
@@ -57,10 +57,12 @@
 				@apply border-b border-b-Primary-1
 				a
 					@apply text-Primary-1
+	.product-detail-tab-content
+		@apply overflow-x-auto
 	.format-content 
 		
 		table
-			@apply w-full  border-Neutral-100 border mt-6 mb-6
+			@apply w-full  border-Neutral-100 border mt-6 mb-6 whitespace-nowrap 
 			thead
 				tr
 					@apply bg-Primary-2 rem:py-[10px] px-5 text-Neutral-White

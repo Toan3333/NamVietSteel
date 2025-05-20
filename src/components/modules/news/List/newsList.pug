@@ -1,0 +1,35 @@
+section.news 	
+	+Banner()
+section.news-1(class="pt-20")
+	.container 
+		.news-main(class="flex")
+			.col-left(class="rem:w-[920px]")
+				.image 
+					a(href="#" class="img-ratio ratio:pt-[613_920] lozad")
+						img(src="./img/1.jpg", alt="") 
+			.col-right(class="w-[calc(100%-47.91666666666667rem)] bg-Neutral-50 px-10 py-15 flex flex-col justify-center")
+				.date(class="text-sm text-Neutral-500-main mb-base") 08.04.2025
+				.content(class="flex flex-col gap-3 text-Primary-Primary_04")
+					h3(class="text-2xl font-secondary font-bold text-Primary-Primary_04") Lễ ra mắt liên doanh TTCapital – Cosmos Initia – Koterasu
+					.desc TPHCM, ngày 5/12/2023, Hôm nay, Công ty cổ phần Đầu tư TTCapital cùng 2 đối tác là Cosmos Initia (Thành viên của Daiwa House Group) và Koterasu ra mắt liên doanh hợp tác, đồng hành dài hạn trong việc phát triển các dự án bất động sản vừa túi tiền tại Việt Nam. Liên doanh long trọng tuyên bố đã hoàn tất việc góp vốn cho dự án đầu tiên trong tháng 11/2023.
+section.news-2(class="py-10")
+	.container 
+		.news-2-list(class="grid lg:grid-cols-3 gap-base md:grid-cols-2")
+			-for(var i = 0; i < 9; i++)
+				.item(class="group")
+					.image 
+						a(href="./newsDetail.html" class="img-ratio ratio:pt-[280_320] lozad zoom-img")
+							img(src="./img/1.jpg", alt="") 
+					.content(class="pt-6 flex flex-col gap-4")
+						.date 08.04.2025
+						h3(class="text-lg font-semibold text-Neutral-950 tracking-[-0.36px] group-hover:text-Primary-1")
+							a(href="#") Công Ty TNHH Thương Mại Thép Nam Việt - Kỷ niệm 25 năm thành lập và phát triển
+						.desc(class="text-Neutral-700 tracking-[-0.32px] font-normal") Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+		.pagination(class="mt-base")
+			ul.page-numbers
+				li 
+					a.active(href="#") 1 
+				li 
+					a(href="#") 2
+				li 
+					a(href="#") 3

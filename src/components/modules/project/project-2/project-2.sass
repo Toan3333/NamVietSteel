@@ -1,0 +1,40 @@
+.project-2
+	.image
+		&::before
+			content: ""
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%)
+			@apply absolute top-0 left-0 w-full h-full pointer-events-auto z-2
+		.content
+			@apply absolute rem:bottom-[51px] z-10 rem:left-[220px]
+			h1
+				line-height: 120px
+				@apply rem:text-[160px] text-Neutral-White uppercase font-black mb-6 
+				@apply relative
+				&::before
+					content: "“"
+					line-height: 56px
+					@apply absolute -top-10 left-[-1.6rem] text-64 text-white/50 font-black uppercase
+			h2
+				letter-spacing: -1.92px
+				line-height: calc(56 / 48)
+				@apply text-6xl font-bold uppercase text-white/50
+@media (max-width: 1023.98px)
+	.project-2
+		.content
+			@apply left-[4.5rem] #{!important}
+			h1
+				line-height: 80px !important
+				@apply text-[72px] #{!important}
+			h2
+				@apply text-5xl #{!important}
+@media (max-width: 767.98px)
+	.project-2
+		.content
+			@apply left-[2rem] bottom-2 #{!important}
+			h1
+				line-height: 40px !important
+				@apply text-[32px] #{!important}
+			h2
+				letter-spacing: 0 !important
+				line-height: 24px !important
+				@apply text-[18px] #{!important}
