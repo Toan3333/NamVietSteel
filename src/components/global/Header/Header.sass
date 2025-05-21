@@ -3,9 +3,38 @@
 	.header-nav
 		@apply flex justify-center items-center xl:gap-11 lg:gap-5
 		li
+			@apply pb-4 hover:border-b-Primary-1 border-b-2 border-b-transparent  cursor-pointer
+			@apply transition-all ease-in-out	
+			&:hover
+				a
+					@apply text-Primary-1
 			a
-				@apply rem:text-[20px] font-semibold text-Neutral-Black pb-4 border-b-2 border-transparent hover:border-b-Primary-1 hover:text-Primary-1
+				@apply rem:text-[20px] font-semibold text-Neutral-Black   hover:text-Primary-1
+			&.menu-item-has-children
+				@apply relative 
+				ul.sub-menu
+					@apply flex flex-col opacity-0 invisible rounded-lg transition-300 z-10 absolute top-[2.6rem] left-0 rem:w-[340px] pointer-events-none overflow-hidden bg-Neutral-White shadow-Dropshadow-Light
+					li
+						@apply pb-0 hover:border-none border-none
+						a
+							@apply text-Neutral-500-main font-medium rem:text-[16px] hover:text-Primary-1 block
+							@apply py-3 px-6
+				&:hover
+					ul.sub-menu
+						@apply opacity-100 pointer-events-auto visible
+		
+
+			&[class*='children']
+				
+				@apply flex items-center gap-2
+				&:hover
+					
+					@apply relative
+					&::before
+						content: ''
+						@apply absolute top-full h-[100%] w-full 
 			&[class*='current']
+				@apply border-b-Primary-1
 				&>a
 					@apply text-Primary-1 border-b-Primary-1
 	.header-bar
@@ -13,7 +42,7 @@
 		@apply inline-flex items-center justify-center 
 		@apply text-Neutral-White bg-Primary-1 backdrop-blur-sm text-2xl
 	.header-search
-		@apply w-10 h-10 flex-shrink-0 
+		@apply w-8 h-8 flex-shrink-0 
 		@apply inline-flex items-center justify-center 
 		@apply bg-transparent text-Primary-1 text-2xl
 	.search-bar-container
@@ -54,17 +83,34 @@
 		transition-property: transform
 		transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1)
 		height: calc(100dvh - var(--header-height))
-		@apply left-0 top-[var(--header-height)] w-full fixed
-		@apply translate-x-full bg-red-600 z-999 overflow-y-auto overflow-hidden
+		@apply left-0 top-[var(--header-height)] w-full fixed px-[15px]
+		@apply translate-x-full bg-Neutral-White z-999 overflow-y-auto overflow-hidden
 		ul
 			@apply flex flex-col items-stretch w-full
 			li
 				a
-					@apply text-Neutral-White py-4 px-[15px] border-b border-b-Neutral-White flex items-center text-[16px]
+					@apply font-semibold
+					@apply text-Neutral-Black py-3   flex items-center text-[16px]
+				&.menu-item-has-children
+					@apply relative 
+					&>a
+						@apply relative flex items-center justify-between
+						
+						&.dropdown-active
+							&::after
+								@apply rotate-180
+						&::after
+							content: '\f0d7'
+							@apply font-awesome font-black text-lg 
+					ul.sub-menu
+						@apply bg-Neutral-50 p-5
+						li
+							a
+								@apply text-black py-2 px-0 font-normal
 			li
 				&[class*='current']
 					&>a
-						@apply text-Neutral-900
+						@apply text-Primary-1
 @media (max-width: 767.98px)
 	.header
 		@apply h-[80px]

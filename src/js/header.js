@@ -44,12 +44,26 @@ export const header = {
 		});
 	},
 	initVariable: function () {
-		const $header = $(".header"); // Chắc chắn đúng selector
-		if ($header.length) {
-			const height = $header.outerHeight(); // outerHeight có padding & border
-			console.log("Header height:", height); // Debug cho chắc
+		const $header = document.querySelector("header");
+		if (!$header) return;
+
+		// Hàm cập nhật chiều cao header
+		function updateHeaderHeight() {
+			const height = $header.offsetHeight;
 			document.documentElement.style.setProperty("--header-height", `${height}px`);
 		}
+
+		// Cập nhật ban đầu
+		updateHeaderHeight();
+
+		// Theo dõi mọi thay đổi chiều cao của header
+		const ro = new ResizeObserver(updateHeaderHeight);
+		ro.observe($header);
+
+		// Phòng trường hợp ảnh hoặc font chưa load xong
+		window.addEventListener("load", () => {
+			setTimeout(updateHeaderHeight, 100);
+		});
 	},
 	init: function () {
 		headerSearch();

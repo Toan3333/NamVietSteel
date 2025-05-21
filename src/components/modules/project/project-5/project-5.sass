@@ -1,4 +1,9 @@
 .project-5
+	.project-5-main
+		.col-right
+			h2
+				@media (max-width: 767.98px)
+					@apply text-[18px] leading-normal
 	.project-overview
 		.format-content
 			p
@@ -28,3 +33,27 @@
 			
 			.content
 				@apply static w-full translate-x-0 translate-y-0 mt-10
+@media (max-width: 767.98px)
+	.project-5
+		.project-overview
+			.format-content
+				p
+					@apply tracking-normal
+		.project-5-intro
+			.content
+				@apply p-6 grid-cols-1 gap-3
+				.item
+					@apply gap-2
+					.top
+						@apply h-auto #{!important}
+						h3
+							@apply tracking-normal
+					.format-content
+						p
+							@apply tracking-normal #{!important}
+		.project-5-overview
+			.left
+				.title
+					@apply mb-3
+				.format-content
+					@apply tracking-normal					

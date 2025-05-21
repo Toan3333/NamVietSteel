@@ -1,10 +1,13 @@
 .project-4
+	
 	.col-left
 		.format-content
 			p
 				letter-spacing: -0.48px
 				line-height: calc( 30 / 24 )
-				@apply text-Neutral-White rem:text-[24px] font-normal
+				@apply text-Neutral-White md:rem:text-[24px] font-normal text-[14px]
+				@media (max-width: 767.98px)
+					@apply tracking-normal
 	.col-right
 		.format-content
 			p
@@ -30,4 +33,16 @@
 	.project-4
 		h2
 			letter-spacing: 0
-			@apply text-[24px]
+			@apply text-[24px] text-center
+
+@media (max-width: 767.98px)
+	.project-4
+		h2
+			@apply text-[18px] leading-normal text-center
+		.project-4-list
+			.top
+				h3
+					@apply tracking-normal
+			.bottom
+				.desc
+					@apply tracking-normal

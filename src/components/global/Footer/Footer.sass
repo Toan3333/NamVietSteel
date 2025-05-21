@@ -34,7 +34,7 @@
 			a.address
 				line-height: calc( 22 / 16 )
 				letter-spacing: -0.32px
-				@apply font-normal rem:text-[16px]
+				@apply font-normal 
 			ul.footer-info
 				@apply mt-5
 	.footer-newsletter
@@ -60,6 +60,14 @@
 	.footer
 		background-image: none !important
 		@apply bg-Primary-2
+		.footer-top
+			@apply mb-4
+		.footer-list
+			.footer-column
+				h3
+					@apply mb-2
+				.address
+					@apply text-[14px] tracking-normal #{!important}
 		.footer-nav 
 			@apply h-full mb-5
 			ul.footer-nav-menu
@@ -67,3 +75,7 @@
 		.footer-newsletter
 			@apply gap-3 items-start
 			@apply mb-5
+			.footer-newsletter-form
+				@apply w-full
+				.input-email
+					@apply w-full

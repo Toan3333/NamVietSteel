@@ -10,22 +10,22 @@
 					@apply py-3 px-4 text-Neutral-500-main font-normal
 					&.parameter
 						@apply text-Neutral-700 font-semibold
-		.product-btn-contact 
-			@apply rem:w-[200px] mb-3 mt-5
-			a
-				letter-spacing: -0.36px
-				@apply inline-flex items-center justify-center bg-Primary-1 text-Neutral-White
-				@apply text-lg font-normal rem:py-[10px] px-5 rounded-full w-full
-				@apply border border-transparent hover:border-Primary-1 hover:bg-transparent hover:text-Primary-1
-		.product-detail-share 
-			@apply flex items-center gap-5
-			span
-				letter-spacing: -0.36px
-				@apply text-lg text-Neutral-950 font-normal
-			a
-				@apply inline-flex items-center justify-center  bg-Primary-2 w-12 h-12
-				i
-					@apply text-xl font-normal text-Neutral-White
+	.product-btn-contact 
+		@apply rem:w-[200px] mb-3 mt-5
+		a
+			letter-spacing: -0.36px
+			@apply inline-flex items-center justify-center bg-Primary-1 text-Neutral-White
+			@apply text-lg font-normal rem:py-[10px] px-5 rounded-full w-full
+			@apply border border-transparent hover:border-Primary-1 hover:bg-transparent hover:text-Primary-1
+	.product-detail-share 
+		@apply flex items-center gap-5
+		span
+			letter-spacing: -0.36px
+			@apply text-lg text-Neutral-950 font-normal
+		a
+			@apply inline-flex items-center justify-center  bg-Primary-2 w-12 h-12
+			i
+				@apply text-xl font-normal text-Neutral-White
 	.product-slide-thumbs
 		.swiper-slide
 			.img
@@ -33,6 +33,7 @@
 			&.swiper-slide-thumb-active
 				.img
 					@apply border-Primary-1
+	
 		.btn
 			&.btn-sw-1
 				&.btn-prev
@@ -90,3 +91,7 @@
 			@apply left-[-4.5rem]
 		.btn-next 
 			@apply right-[-4.5rem]
+@media (max-width: 1023.98px)
+	.product-slide-thumbs
+		.btn.btn-sw-1
+			@apply hidden

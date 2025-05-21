@@ -81,6 +81,7 @@ function swiperProductDetail() {
 			768: {
 				slidesPerView: 4,
 				spaceBetween: 16,
+				direction: "horizontal",
 			},
 			1024: {
 				slidesPerView: 4,
